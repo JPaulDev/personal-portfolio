@@ -1,3 +1,4 @@
+import { Header } from '@components/common';
 import Head from 'next/head';
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Jonathan Watson</title>
       </Head>
-      <div>Homepage</div>
+      <Header />
     </>
   );
 }

@@ -5,13 +5,14 @@
 @layer base {
   :root {
     --navy: #0b1b33;
+    --navy-dark: #091629;
     --slate: #495670;
   }
 
   html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--slate) var(--navy);
+    scrollbar-color: var(--slate) var(--navy-dark);
   }
 
   ::-webkit-scrollbar {
@@ -19,12 +20,12 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: var(--navy);
+    background: var(--navy-dark);
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: var(--slate);
-    border: 3px solid var(--navy);
+    border: 2px solid var(--navy-dark);
     border-radius: 10px;
   }
 

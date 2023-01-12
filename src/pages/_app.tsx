@@ -1,5 +1,7 @@
+import { Layout } from '@components';
 import localFont from '@next/font/local';
 import '@styles/globals.css';
+import { UIProvider } from 'contexts/UIContext';
 import type { AppProps } from 'next/app';
 
 const calibre = localFont({
@@ -47,7 +49,11 @@ const sfMono = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={`${sfMono.variable} ${calibre.variable} font-sans`}>
-      <Component {...pageProps} />
+      <UIProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </UIProvider>
     </div>
   );
 }

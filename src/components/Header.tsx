@@ -1,36 +1,21 @@
-import { Logo } from '@components/icons';
-import { Link } from '@components/ui';
+import { NAV_LINKS, RESUME_LINK } from '@config';
+import { useScrollDirection } from '@hooks';
+import { Logo } from '@icons';
 import clsx from 'clsx';
-import useScrollDirection from 'hooks/useScrollDirection';
+import { useUI } from 'contexts/UIContext';
 import { useEffect, useState } from 'react';
+import Link from './Link';
 
 interface NavLink {
   name: string;
   href: string;
 }
 
-const NAV_LINKS = [
-  {
-    name: 'About',
-    href: '#about',
-  },
-  {
-    name: 'Technologies',
-    href: '#technologies',
-  },
-  {
-    name: 'Projects',
-    href: '#projects',
-  },
-  {
-    name: 'Contact',
-    href: '#contact',
-  },
-];
-
 export default function Header() {
   const scrollDirection = useScrollDirection();
-  const [scrolledToTop, setScrolledToTop] = useState(true);
+  const [scrolledToTop, setScrolledToTop] = useState<boolean>(true);
+
+  const { handleOpenSidebar } = useUI();
 
   const handleScroll = () => {
     setScrolledToTop(window.scrollY < 30);
@@ -56,7 +41,7 @@ export default function Header() {
     >
       <nav className="flex w-full items-center justify-between">
         <Link className="group" href="/" aria-label="Home" title="Home">
-          <Logo className="stroke-teal-300 group-hover:fill-teal-300/10 group-focus:fill-teal-300/10" />
+          <Logo className="h-12 w-12 stroke-teal-300 group-hover:fill-teal-300/10 group-focus:fill-teal-300/10" />
         </Link>
 
         <div className="hidden items-center font-mono text-sm md:flex">
@@ -75,13 +60,28 @@ export default function Header() {
           </ol>
 
           <Link
-            className="ml-5 rounded-sm border border-teal-300 py-3 px-4 text-teal-300 transition-colors hover:bg-teal-300/10 focus:bg-teal-300/10"
-            href="/resume.pdf"
+            className="ml-5 rounded border border-teal-300 py-3 px-4 text-teal-300 transition-colors hover:bg-teal-300/10 focus:bg-teal-300/10"
+            href={RESUME_LINK}
             target="_blank"
           >
             Resume
           </Link>
         </div>
+
+        <button
+          title="Open Menu"
+          aria-label="Open Menu"
+          className="group md:hidden"
+          onClick={handleOpenSidebar}
+        >
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 shadow-lg ring-0 ring-slate-500 transition-all duration-200 hover:ring-2">
+            <span className="flex h-5 w-5 flex-col justify-between">
+              <span className="h-[0.125rem] bg-teal-300" />
+              <span className="h-[0.125rem] w-3 bg-teal-300" />
+              <span className="h-[0.125rem] bg-teal-300" />
+            </span>
+          </span>
+        </button>
       </nav>
     </header>
   );

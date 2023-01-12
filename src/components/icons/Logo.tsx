@@ -4,8 +4,8 @@ export default function Logo(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
+      width="25"
+      height="25"
       viewBox="0 0 20 20"
       strokeWidth="1.3"
       stroke="currentColor"

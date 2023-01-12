@@ -6,13 +6,23 @@
   :root {
     --navy: #0b1b33;
     --navy-dark: #091629;
-    --slate: #495670;
+    --navy-light: #112240;
+    --slate: #475569;
   }
 
   html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--slate) var(--navy-dark);
+  }
+
+  body {
+    background-color: var(--navy-dark);
+  }
+
+  #__next {
+    min-height: 100vh;
+    background-color: var(--navy);
   }
 
   ::-webkit-scrollbar {
@@ -27,10 +37,5 @@
     background-color: var(--slate);
     border: 2px solid var(--navy-dark);
     border-radius: 10px;
-  }
-
-  #__next {
-    min-height: 100vh;
-    background-color: var(--navy);
   }
 }

@@ -18,6 +18,7 @@
     "paths": {
       "@styles/*": ["styles/*"],
       "@components": ["components"],
+      "@sections": ["components/sections"],
       "@icons": ["components/icons"],
       "@hooks": ["hooks"],
       "@config": ["config"]

@@ -4,25 +4,26 @@
 
 @layer base {
   :root {
-    --navy: #0b1b33;
-    --navy-dark: #091629;
-    --navy-light: #112240;
-    --slate: #475569;
+    --color-scrollbar-bg: #091629;
+    --color-scrollbar-thumb: #475569;
+    --color-bg-primary: 11, 27, 51;
+    --color-bg-secondary: 17, 34, 64;
+    --color-text-primary: 136, 146, 176;
+    --color-text-secondary: 204, 214, 246;
   }
 
   html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--slate) var(--navy-dark);
+    scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-bg);
   }
 
   body {
-    background-color: var(--navy-dark);
+    background-color: var(--color-scrollbar-bg);
   }
 
   #__next {
-    min-height: 100vh;
-    background-color: var(--navy);
+    @apply min-h-screen bg-skin-primary;
   }
 
   ::-webkit-scrollbar {
@@ -30,12 +31,12 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: var(--navy-dark);
+    background: var(--color-scrollbar-bg);
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: var(--slate);
-    border: 2px solid var(--navy-dark);
+    background-color: var(--color-scrollbar-thumb);
+    border: 2px solid var(--color-scrollbar-bg);
     border-radius: 10px;
   }
 }

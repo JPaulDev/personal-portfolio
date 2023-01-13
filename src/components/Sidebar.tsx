@@ -68,7 +68,7 @@ function SidebarView({ onCloseSidebar }: Props) {
         animate={{ x: 0 }}
         exit={{ x: '100%' }}
         transition={transition}
-        className="absolute right-0 flex h-full w-8/12 max-w-xs items-center justify-center bg-[var(--navy-light)] shadow-2xl"
+        className="absolute right-0 flex h-full w-8/12 max-w-xs items-center justify-center bg-skin-secondary shadow-2xl"
       >
         <button
           ref={closeButtonRef}

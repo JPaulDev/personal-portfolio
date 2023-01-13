@@ -15,7 +15,9 @@ export default function Layout({ children }: Props) {
     <>
       <Header />
       <Sidebar />
-      <main>{children}</main>
+      <main className="mx-auto max-w-7xl px-6 xs:px-12 md:px-24 lg:px-36">
+        {children}
+      </main>
     </>
   );
 }

@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        'fixed flex w-full items-center bg-[#0b1b33d0] px-6 backdrop-blur transition-all duration-500 md:px-8 lg:px-14',
+        'fixed flex w-full items-center bg-skin-primary bg-opacity-80 px-6 backdrop-blur transition-all duration-500 md:px-8 lg:px-14',
         !scrolledToTop && scrollDirection === 'up' ? 'h-20 shadow-xl' : 'h-24',
         !scrolledToTop &&
           scrollDirection === 'down' &&

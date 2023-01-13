@@ -1,5 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires, import/no-extraneous-dependencies
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily, screens } = require('tailwindcss/defaultTheme');
+
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
+}
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,6 +22,22 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-calibre)', ...fontFamily.sans],
         mono: ['var(--font-sf-mono)', ...fontFamily.mono],
+      },
+      screens: {
+        xs: '480px',
+        ...screens,
+      },
+      textColor: {
+        skin: {
+          primary: withOpacity('--color-text-primary'),
+          secondary: withOpacity('--color-text-secondary'),
+        },
+      },
+      backgroundColor: {
+        skin: {
+          primary: withOpacity('--color-bg-primary'),
+          secondary: withOpacity('--color-bg-secondary'),
+        },
       },
     },
   },

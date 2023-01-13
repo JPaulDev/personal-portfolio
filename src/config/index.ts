@@ -18,3 +18,13 @@ export const NAV_LINKS = [
 ];
 
 export const RESUME_LINK = '/resume.pdf';
+
+export const EMAIL = 'jwatson88@live.co.uk';
+
+export const SOCIAL_MEDIA = [
+  { name: 'github', href: 'https://www.github.com/jpauldev' },
+  { name: 'linkedin', href: 'https://www.linkedin.com/in/jpaulwatson/' },
+  { name: 'codepen', href: 'https://www.codepen.io/jpauldev' },
+  { name: 'twitter', href: '' },
+  { name: 'instagram', href: '' },
+];

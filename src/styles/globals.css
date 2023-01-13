@@ -10,6 +10,7 @@
     --color-bg-secondary: 17, 34, 64;
     --color-text-primary: 136, 146, 176;
     --color-text-secondary: 204, 214, 246;
+    --color-text-tertiary: 168, 178, 209;
   }
 
   html {

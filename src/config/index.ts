@@ -37,3 +37,18 @@ export const RECENT_SKILLS = [
   'Prisma',
   'Redux',
 ];
+
+export const TECHNOLOGIES = [
+  'JavaScript',
+  'TypeScript',
+  'Python',
+  'React',
+  'Next.js',
+  'Redux',
+  'Tailwind',
+  'Git',
+  'PostgreSQL',
+  'Prisma',
+  'Jest',
+  'Styled Components',
+];

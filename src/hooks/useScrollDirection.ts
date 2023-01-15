@@ -4,8 +4,8 @@ const THRESHOLD = 0;
 
 export default function useScrollDirection(): 'up' | 'down' {
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('up');
-  const blocking = useRef(false);
-  const prevScrollY = useRef(0);
+  const blocking = useRef<boolean>(false);
+  const prevScrollY = useRef<number>(0);
 
   useEffect(() => {
     prevScrollY.current = window.scrollY;

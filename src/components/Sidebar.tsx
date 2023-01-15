@@ -58,7 +58,7 @@ function SidebarView({ onCloseSidebar }: Props) {
       animate={{ backdropFilter: 'blur(2px)' }}
       exit={{ backdropFilter: 'blur(0px)' }}
       transition={transition}
-      className="fixed inset-0"
+      className="fixed inset-0 z-50"
     >
       <motion.div
         ref={sidebarRef}

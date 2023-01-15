@@ -1,4 +1,4 @@
-import { Hero } from '@sections';
+import { About, Hero } from '@sections';
 import Head from 'next/head';
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
         <title>Jonathan Watson</title>
       </Head>
       <Hero />
+      <About />
     </>
   );
 }

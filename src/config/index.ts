@@ -28,3 +28,5 @@ export const SOCIAL_MEDIA = [
   { name: 'twitter', href: '' },
   { name: 'instagram', href: '' },
 ];
+
+export const RECENT_SKILLS = ['TypeScript', 'React', 'Next.js', 'Tailwind CSS'];

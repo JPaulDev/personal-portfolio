@@ -17,7 +17,7 @@ export default function Layout({ children }: Props) {
       <Header />
       <Sidebar />
       <SocialAndEmail />
-      <main className="mx-auto max-w-7xl px-6 xs:px-12 md:px-24 lg:px-36">
+      <main className="mx-auto flex max-w-7xl flex-col items-center gap-24 px-6 [counter-reset:heading] xs:px-12 md:px-24 lg:px-36">
         {children}
       </main>
     </>

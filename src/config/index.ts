@@ -29,4 +29,11 @@ export const SOCIAL_MEDIA = [
   { name: 'instagram', href: '' },
 ];
 
-export const RECENT_SKILLS = ['TypeScript', 'React', 'Next.js', 'Tailwind CSS'];
+export const RECENT_SKILLS = [
+  'TypeScript',
+  'React',
+  'Next.js',
+  'Tailwind CSS',
+  'Prisma',
+  'Redux',
+];

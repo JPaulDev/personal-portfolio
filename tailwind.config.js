@@ -38,6 +38,7 @@ module.exports = {
         skin: {
           primary: withOpacity('--color-bg-primary'),
           secondary: withOpacity('--color-bg-secondary'),
+          tertiary: withOpacity('--color-bg-tertiary'),
         },
       },
     },

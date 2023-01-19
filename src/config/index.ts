@@ -1,3 +1,6 @@
+import commerce from '../../public/images/commerce.webp';
+import portfolio from '../../public/images/portfolio.webp';
+
 export const NAV_LINKS = [
   {
     name: 'About',
@@ -52,3 +55,44 @@ export const TECHNOLOGIES = [
   'Jest',
   'Styled Components',
 ];
+
+const RTL_LINK =
+  '<a target="_blank" href="https://testing-library.com/docs/guiding-principles" class="relative whitespace-nowrap text-teal-300 after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-teal-300 after:transition-all after:duration-300 after:hover:w-full">guidelines</a>';
+
+export const PROJECTS = {
+  featured: [
+    {
+      name: 'E-commerce Store',
+      description: `An e-commerce website where users can view different products
+        by category and add/remove products from their shopping cart. The site
+        also features authentication provided by Passport.js. Users can create an
+        account, update their personal details, or change their password. The
+        project is built with Next.js and uses a PostgreSQL database hosted on
+        Amazon Web Services. Tests are written using React Testing Library and
+        follow the ${RTL_LINK} set out in their documentation.`,
+      image: commerce,
+      linkGithub: '/',
+      linkExternal: '/',
+      technologies: [
+        'React',
+        'Next.js',
+        'Styled Components',
+        'Redux',
+        'PostgreSQL',
+        'Prisma',
+        'Jest',
+        'Testing Library',
+      ],
+    },
+    {
+      name: 'Personal Portfolio',
+      description: `My personal portfolio website, built to showcase my projects
+        and skills, is constructed using Next.js and TypeScript. Tailwind CSS is
+        utilized for styling, and the project is deployed and hosted on Vercel.`,
+      image: portfolio,
+      linkGithub: '/',
+      linkExternal: '/',
+      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    },
+  ],
+};

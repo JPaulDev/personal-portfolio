@@ -1,4 +1,5 @@
 export { default as Codepen } from './Codepen';
+export { default as External } from './External';
 export { default as Git } from './Git';
 export { default as Github } from './Github';
 export { default as Instagram } from './Instagram';

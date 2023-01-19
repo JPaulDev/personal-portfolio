@@ -1,4 +1,4 @@
-import { About, Hero, Technologies } from '@sections';
+import { About, Hero, Projects, Technologies } from '@sections';
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
       <Hero />
       <About />
       <Technologies />
+      <Projects />
     </>
   );
 }

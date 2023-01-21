@@ -21,7 +21,7 @@ export default function Technologies() {
       </section>
 
       <section className="max-w-4xl">
-        <h2 className="relative mb-10 flex justify-center before:absolute before:mt-3 before:h-px before:w-full before:max-w-2xl before:bg-slate-700">
+        <h2 className="relative my-10 flex justify-center before:absolute before:mt-3 before:h-px before:w-full before:max-w-2xl before:bg-slate-700">
           <span className="z-10 bg-skin-primary px-4 text-center text-2xl font-semibold text-skin-secondary xs:text-3xl">
             Other Noteworthy Projects
           </span>

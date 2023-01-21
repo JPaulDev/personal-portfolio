@@ -9,7 +9,7 @@ export default function SectionHeading({
   return (
     <h2
       className={clsx(
-        'mb-10 flex pt-10 text-2xl font-semibold text-skin-secondary [counter-increment:heading] before:mr-3 before:font-mono before:text-lg before:font-normal before:text-teal-300 before:content-["0"counter(heading)"."] xs:text-3xl before:xs:text-xl',
+        'my-10 flex text-2xl font-semibold text-skin-secondary [counter-increment:heading] before:mr-3 before:font-mono before:text-lg before:font-normal before:text-teal-300 before:content-["0"counter(heading)"."] xs:text-3xl before:xs:text-xl',
         className
       )}
       {...rest}

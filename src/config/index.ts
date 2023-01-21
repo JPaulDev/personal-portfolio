@@ -95,4 +95,24 @@ export const PROJECTS = {
       technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     },
   ],
+  other: [
+    {
+      name: 'Memory Game',
+      description: `A Pokémon-themed memory game built with React and Styled Components.
+        The user is presented with a grid of cards, and must click on each card 
+        only once. The user can select from four different difficulties.`,
+      linkGithub: '/',
+      linkExternal: '/',
+      technologies: ['React', 'Styled Components'],
+    },
+    {
+      name: 'CV Creator',
+      description: `A CV creator built with React and Styled Components. The user
+        can create a CV by filling out a form with their personal details and work
+        history.`,
+      linkGithub: '/',
+      linkExternal: '/',
+      technologies: ['React', 'Styled Components'],
+    },
+  ],
 };

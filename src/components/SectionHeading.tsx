@@ -1,18 +1,15 @@
 import clsx from 'clsx';
-import { ComponentProps } from 'react';
+import { ComponentPropsWithRef, forwardRef } from 'react';
 
-interface Props extends ComponentProps<'h2'> {
+interface Props extends ComponentPropsWithRef<'h2'> {
   variant?: 'default' | 'alternative';
 }
 
-export default function SectionHeading({
-  variant = 'default',
-  children,
-  className,
-  ...rest
-}: Props) {
-  return (
+// eslint-disable-next-line react/display-name
+const SectionHeading = forwardRef<HTMLHeadingElement, Props>(
+  ({ variant = 'default', children, className, ...rest }, ref) => (
     <h2
+      ref={ref}
       className={clsx(
         '[counter-increment:heading] before:content-["0"counter(heading)"."]',
         variant === 'default' &&
@@ -28,5 +25,7 @@ export default function SectionHeading({
         <span className="ml-5 mt-3 h-px flex-1 bg-slate-700 md:max-w-xs" />
       )}
     </h2>
-  );
-}
+  )
+);
+
+export default SectionHeading;

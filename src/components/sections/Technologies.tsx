@@ -1,4 +1,4 @@
-import { SectionHeading } from '@components';
+import { ScrollReveal, SectionHeading } from '@components';
 import { TECHNOLOGIES } from '@config';
 import {
   Git,
@@ -33,20 +33,24 @@ const icons = {
 export default function Technologies() {
   return (
     <section id="technologies" className="max-w-3xl">
-      <SectionHeading>Technologies</SectionHeading>
+      <ScrollReveal threshold={0.2}>
+        <SectionHeading>Technologies</SectionHeading>
 
-      <ul className="flex flex-wrap justify-center gap-7">
-        {TECHNOLOGIES.map((technology) => {
-          const Icon = icons[technology.toLowerCase() as keyof typeof icons];
+        <ul className="flex flex-wrap justify-center gap-7">
+          {TECHNOLOGIES.map((technology) => {
+            const Icon = icons[technology.toLowerCase() as keyof typeof icons];
 
-          return (
-            <li key={technology} className="flex flex-col items-center gap-3">
-              <Icon className="h-10 w-10 xs:h-12 xs:w-12 md:h-14 md:w-14" />
-              <span className="font-mono text-sm text-white">{technology}</span>
-            </li>
-          );
-        })}
-      </ul>
+            return (
+              <li key={technology} className="flex flex-col items-center gap-3">
+                <Icon className="h-10 w-10 xs:h-12 xs:w-12 md:h-14 md:w-14" />
+                <span className="font-mono text-sm text-white">
+                  {technology}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </ScrollReveal>
     </section>
   );
 }

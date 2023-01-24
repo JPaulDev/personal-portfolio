@@ -16,9 +16,10 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
     }
 
     const safeRel = linkTarget === '_blank' ? 'noopener noreferrer' : rel;
+    const Component = isExternal ? 'a' : NextLink;
 
-    return isExternal ? (
-      <a
+    return (
+      <Component
         ref={ref}
         className={className}
         href={href}
@@ -27,18 +28,7 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
         {...rest}
       >
         {children}
-      </a>
-    ) : (
-      <NextLink
-        ref={ref}
-        className={className}
-        href={href}
-        rel={safeRel}
-        target={linkTarget}
-        {...rest}
-      >
-        {children}
-      </NextLink>
+      </Component>
     );
   }
 );

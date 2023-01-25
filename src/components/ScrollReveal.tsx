@@ -1,4 +1,4 @@
-import { useInView } from 'framer-motion';
+import { useInView, useReducedMotion } from 'framer-motion';
 import { ElementType, ReactNode, useRef } from 'react';
 
 interface Props {
@@ -33,6 +33,7 @@ export default function ScrollReveal({
   delay = 200,
   children,
 }: Props) {
+  const shouldReduceMotion = useReducedMotion();
   const ref = useRef(null as null | HTMLElement);
   const isInView = useInView(ref, {
     once: true,
@@ -47,7 +48,8 @@ export default function ScrollReveal({
       id={id}
       className={className}
       style={{
-        transform: isInView ? 'none' : 'translateY(30px)',
+        transform:
+          isInView && !shouldReduceMotion ? 'none' : 'translateY(30px)',
         opacity: isInView ? 1 : 0,
         transition: `all ${duration}ms cubic-bezier(0.645, 0.045, 0.355, 1) ${delay}ms`,
       }}

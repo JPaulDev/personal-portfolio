@@ -1,4 +1,4 @@
-import { SOCIAL_MEDIA } from '@config';
+import { SOCIAL_MEDIA, GITHUB_LINK } from '@config';
 import { Codepen, Github, Instagram, LinkedIn, Twitter } from '@icons';
 import Link from './Link';
 
@@ -31,7 +31,7 @@ export default function Footer() {
       </ul>
 
       <Link
-        href="https://www.github.com/jpauldev"
+        href={GITHUB_LINK}
         className="font-mono text-sm text-skin-tertiary transition-colors duration-300 hover:text-teal-300"
       >
         Built by JPaulDev

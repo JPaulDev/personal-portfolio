@@ -22,6 +22,8 @@ export const NAV_LINKS = [
 
 export const RESUME_LINK = '/resume.pdf';
 
+export const GITHUB_LINK = 'https://www.github.com/jpauldev';
+
 export const EMAIL = 'jwatson88@live.co.uk';
 
 export const SOCIAL_MEDIA = [

@@ -2,6 +2,7 @@ import { NAV_LINKS, RESUME_LINK } from '@config';
 import { useCloseOnEscape, useOnClickOutside, useSetFocus } from '@hooks';
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 import { useUI } from 'contexts/UIContext';
+import FocusTrap from 'focus-trap-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Link from './Link';
@@ -53,64 +54,66 @@ function SidebarView({ onCloseSidebar }: Props) {
   }, [onCloseSidebar]);
 
   return (
-    <motion.div
-      initial={{ backdropFilter: 'blur(0px)' }}
-      animate={{ backdropFilter: 'blur(2px)' }}
-      exit={{ backdropFilter: 'blur(0px)' }}
-      transition={transition}
-      className="fixed inset-0 z-50"
-    >
+    <FocusTrap>
       <motion.div
-        ref={sidebarRef}
-        role="dialog"
-        aria-modal="true"
-        initial={{ x: '100%' }}
-        animate={{ x: 0 }}
-        exit={{ x: '100%' }}
+        initial={{ backdropFilter: 'blur(0px)' }}
+        animate={{ backdropFilter: 'blur(2px)' }}
+        exit={{ backdropFilter: 'blur(0px)' }}
         transition={transition}
-        className="absolute right-0 flex h-full w-8/12 max-w-xs items-center justify-center bg-skin-secondary shadow-2xl"
+        className="fixed inset-0 z-50"
       >
-        <button
-          ref={closeButtonRef}
-          title="Close Menu"
-          aria-label="Close Menu"
-          className="group absolute top-6 right-6"
-          onClick={onCloseSidebar}
+        <motion.div
+          ref={sidebarRef}
+          role="dialog"
+          aria-modal="true"
+          initial={{ x: '100%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '100%' }}
+          transition={transition}
+          className="absolute right-0 flex h-full w-8/12 max-w-xs items-center justify-center bg-skin-secondary shadow-2xl"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 shadow-lg ring-0 ring-slate-500 transition-all duration-200 hover:ring-2">
-            <span className="relative flex h-5 w-5 items-center justify-center overflow-hidden">
-              <span className="absolute h-[0.125rem] w-7 rotate-45 bg-teal-300" />
-              <span className="absolute h-[0.125rem] w-7 -rotate-45 bg-teal-300" />
-            </span>
-          </span>
-        </button>
-
-        <nav className="flex flex-col items-center font-mono">
-          <ol className="space-y-9 [counter-reset:section]">
-            {NAV_LINKS.map((link: NavLink) => (
-              <li key={link.name}>
-                <Link
-                  className="flex flex-col items-center text-slate-300 transition-colors [counter-increment:section] before:mb-2 before:text-sm before:text-teal-300 before:content-['0'counter(section)'.'] hover:text-teal-300 focus:text-teal-300"
-                  href={link.href}
-                  scroll={false}
-                  onClick={onCloseSidebar}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ol>
-
-          <Link
-            className="mt-20 rounded border border-teal-300 py-3 px-10 text-teal-300 transition-colors hover:bg-teal-300/10 focus:bg-teal-300/10"
-            href={RESUME_LINK}
-            target="_blank"
+          <button
+            ref={closeButtonRef}
+            title="Close Menu"
+            aria-label="Close Menu"
+            className="group absolute top-6 right-6"
+            onClick={onCloseSidebar}
           >
-            Resume
-          </Link>
-        </nav>
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 shadow-lg ring-0 ring-slate-500 transition-all duration-200 hover:ring-2">
+              <span className="relative flex h-5 w-5 items-center justify-center overflow-hidden">
+                <span className="absolute h-[0.125rem] w-7 rotate-45 bg-teal-300" />
+                <span className="absolute h-[0.125rem] w-7 -rotate-45 bg-teal-300" />
+              </span>
+            </span>
+          </button>
+
+          <nav className="flex flex-col items-center font-mono">
+            <ol className="space-y-9 [counter-reset:section]">
+              {NAV_LINKS.map((link: NavLink) => (
+                <li key={link.name}>
+                  <Link
+                    className="flex flex-col items-center text-slate-300 transition-colors [counter-increment:section] before:mb-2 before:text-sm before:text-teal-300 before:content-['0'counter(section)'.'] hover:text-teal-300 focus:text-teal-300"
+                    href={link.href}
+                    scroll={false}
+                    onClick={onCloseSidebar}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ol>
+
+            <Link
+              className="mt-20 rounded border border-teal-300 py-3 px-10 text-teal-300 transition-colors hover:bg-teal-300/10 focus:bg-teal-300/10"
+              href={RESUME_LINK}
+              target="_blank"
+            >
+              Resume
+            </Link>
+          </nav>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </FocusTrap>
   );
 }
 

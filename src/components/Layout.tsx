@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import { ReactNode } from 'react';
 import Footer from './Footer';
 import Header from './Header';
+import LoadingScreen from './LoadingScreen';
 import SocialAndEmail from './SocialAndEmail';
 
 interface Props {
@@ -15,6 +16,7 @@ const Sidebar = dynamic(() => import('./Sidebar'), {
 export default function Layout({ children }: Props) {
   return (
     <>
+      <LoadingScreen />
       <Header />
       <Sidebar />
       <SocialAndEmail />

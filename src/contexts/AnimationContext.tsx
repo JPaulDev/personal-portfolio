@@ -1,11 +1,13 @@
 import { AnimationControls, useAnimationControls } from 'framer-motion';
-import { createContext, useContext, useEffect, useMemo } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 interface Props {
   children: React.ReactNode;
 }
 
 interface State {
+  isLoading: boolean;
+  setIsLoading: (isLoading: boolean) => void;
   headerControls: AnimationControls;
   heroControls: AnimationControls;
   socialAndEmailControls: AnimationControls;
@@ -27,11 +29,15 @@ function sleep(ms: number): Promise<void> {
 }
 
 export function AnimationProvider(props: Props) {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
   const headerControls = useAnimationControls();
   const heroControls = useAnimationControls();
   const socialAndEmailControls = useAnimationControls();
 
   useEffect(() => {
+    if (isLoading) return;
+
     const sequence = async (): Promise<void> => {
       await headerControls.start('finish');
       await sleep(DELAY);
@@ -41,10 +47,12 @@ export function AnimationProvider(props: Props) {
     };
 
     sequence();
-  }, [headerControls, heroControls, socialAndEmailControls]);
+  }, [isLoading, headerControls, heroControls, socialAndEmailControls]);
 
   const value = useMemo(
     () => ({
+      isLoading,
+      setIsLoading,
       headerControls,
       heroControls,
       socialAndEmailControls,
@@ -53,7 +61,7 @@ export function AnimationProvider(props: Props) {
         ease: [0.645, 0.045, 0.355, 1],
       },
     }),
-    [headerControls, heroControls, socialAndEmailControls]
+    [isLoading, headerControls, heroControls, socialAndEmailControls]
   );
 
   return <AnimationContext.Provider value={value} {...props} />;

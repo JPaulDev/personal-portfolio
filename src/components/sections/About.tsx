@@ -65,6 +65,7 @@ export default function About() {
                 className="relative z-10 rounded-md mix-blend-multiply grayscale transition-all duration-300 group-hover:mix-blend-normal group-hover:grayscale-0"
                 alt="Personal profile picture."
                 quality={90}
+                priority
                 src={profile}
               />
             </div>

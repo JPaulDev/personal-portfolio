@@ -73,8 +73,8 @@ export const PROJECTS = {
         Amazon Web Services. Tests are written using React Testing Library and
         follow the ${RTL_LINK} set out in their documentation.`,
       image: commerce,
-      linkGithub: '/',
-      linkExternal: '/',
+      linkGithub: 'https://github.com/JPaulDev/ecommerce-store',
+      linkExternal: 'https://ecommerce-store-jpauldev.vercel.app/',
       technologies: [
         'React',
         'Next.js',
@@ -92,7 +92,7 @@ export const PROJECTS = {
         and skills, is constructed using Next.js and TypeScript. Tailwind CSS is
         utilized for styling, and the project is deployed and hosted on Vercel.`,
       image: portfolio,
-      linkGithub: '/',
+      linkGithub: 'https://github.com/JPaulDev/personal-portfolio',
       linkExternal: '/',
       technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     },
@@ -103,8 +103,8 @@ export const PROJECTS = {
       description: `A Pokémon-themed memory game built with React and Styled Components.
         The user is presented with a grid of cards, and must click on each card 
         only once. The user can select from four different difficulties.`,
-      linkGithub: '/',
-      linkExternal: '/',
+      linkGithub: 'https://github.com/JPaulDev/memory-game',
+      linkExternal: 'https://jpauldev.github.io/memory-game/',
       technologies: ['React', 'Styled Components'],
     },
     {
@@ -112,8 +112,8 @@ export const PROJECTS = {
       description: `A CV creator built with React and Styled Components. The user
         can create a CV by filling out a form with their personal details and work
         history.`,
-      linkGithub: '/',
-      linkExternal: '/',
+      linkGithub: 'https://github.com/JPaulDev/cv-creator',
+      linkExternal: 'https://jpauldev.github.io/cv-creator/',
       technologies: ['React', 'Styled Components'],
     },
   ],

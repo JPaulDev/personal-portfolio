@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "airbnb-base",
+    "prettier"
+  ],
+  "rules": {
+    "no-undef": "off",
+    "no-unused-vars": "warn",
+    "import/extensions": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }]
+  }
+}

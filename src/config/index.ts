@@ -116,5 +116,30 @@ export const PROJECTS = {
       linkExternal: 'https://jpauldev.github.io/cv-creator/',
       technologies: ['React', 'Styled Components'],
     },
+    {
+      name: 'Northcoders News',
+      description: `A news website that displays a range of fictional news articles.
+        Each news article has its own page, which includes a featured image, the article
+        title, author name, date of publication, and the article content. The article
+        page also allows users to like an article and/or leave a comment and share their thoughts.`,
+      linkGithub: 'https://github.com/JPaulDev/nc-news',
+      linkExternal: 'https://nc-news-three.vercel.app/',
+      technologies: [
+        'React',
+        'Tailwind CSS',
+        'Create React App',
+        'React Router',
+      ],
+    },
+    {
+      name: 'News API',
+      description: `A news API built with Express.js and PostgreSQL. The API
+        allows users to view a list of articles, view a single article, and
+        view a list of comments for a single article. Users can also like an article
+        and/or add a comment. Tests are written using Jest and Supertest.`,
+      linkGithub: 'https://github.com/JPaulDev/cv-creator',
+      linkExternal: 'https://jpauldev.github.io/cv-creator/',
+      technologies: ['Express.js', 'Jest', 'PostgreSQL'],
+    },
   ],
 };

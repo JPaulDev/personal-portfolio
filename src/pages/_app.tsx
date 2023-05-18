@@ -1,6 +1,7 @@
 import { Layout } from '@components';
 import localFont from '@next/font/local';
 import '@styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 import { AnimationProvider } from 'contexts/AnimationContext';
 import { UIProvider } from 'contexts/UIContext';
 import { MotionConfig } from 'framer-motion';
@@ -56,6 +57,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <UIProvider>
             <Layout>
               <Component {...pageProps} />
+              <Analytics />
             </Layout>
           </UIProvider>
         </AnimationProvider>

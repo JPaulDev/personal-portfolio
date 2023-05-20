@@ -74,7 +74,7 @@ export const PROJECTS = {
         follow the ${RTL_LINK} set out in their documentation.`,
       image: commerce,
       linkGithub: 'https://github.com/JPaulDev/ecommerce-store',
-      linkExternal: 'https://ecommerce-store-jpauldev.vercel.app/',
+      linkExternal: 'https://ecommerce-store-jpauldev.vercel.app',
       technologies: [
         'React',
         'Next.js',
@@ -104,7 +104,7 @@ export const PROJECTS = {
         The user is presented with a grid of cards, and must click on each card 
         only once. The user can select from four different difficulties.`,
       linkGithub: 'https://github.com/JPaulDev/memory-game',
-      linkExternal: 'https://jpauldev.github.io/memory-game/',
+      linkExternal: 'https://jpauldev.github.io/memory-game',
       technologies: ['React', 'Styled Components'],
     },
     {
@@ -113,7 +113,7 @@ export const PROJECTS = {
         can create a CV by filling out a form with their personal details and work
         history.`,
       linkGithub: 'https://github.com/JPaulDev/cv-creator',
-      linkExternal: 'https://jpauldev.github.io/cv-creator/',
+      linkExternal: 'https://jpauldev.github.io/cv-creator',
       technologies: ['React', 'Styled Components'],
     },
     {
@@ -123,7 +123,7 @@ export const PROJECTS = {
         title, author name, date of publication, and the article content. The article
         page also allows users to like an article and/or leave a comment and share their thoughts.`,
       linkGithub: 'https://github.com/JPaulDev/nc-news',
-      linkExternal: 'https://nc-news-three.vercel.app/',
+      linkExternal: 'https://nc-news-three.vercel.app',
       technologies: [
         'React',
         'Tailwind CSS',

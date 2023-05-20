@@ -137,8 +137,8 @@ export const PROJECTS = {
         allows users to view a list of articles, view a single article, and
         view a list of comments for a single article. Users can also like an article
         and/or add a comment. Tests are written using Jest and Supertest.`,
-      linkGithub: 'https://github.com/JPaulDev/cv-creator',
-      linkExternal: 'https://jpauldev.github.io/cv-creator/',
+      linkGithub: 'https://github.com/JPaulDev/news-api',
+      linkExternal: 'https://news-api-sjab.onrender.com/api',
       technologies: ['Express.js', 'Jest', 'PostgreSQL'],
     },
   ],

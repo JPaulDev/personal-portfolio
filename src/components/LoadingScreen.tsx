@@ -57,14 +57,14 @@ export default function LoadingScreen() {
         role="img"
         initial={{ scale: 1, opacity: 1 }}
         animate={fadeOutControls}
-        transition={{ duration: 0.3, delay: 1 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
         strokeLinejoin="round"
         className="h-24 w-24"
       >
         <motion.path
           initial={{ pathLength: 0 }}
           animate={drawControls}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1 }}
           d="M17 4.873a2 2 0 0 1 1 1.747v6.536a2 2 0 0 1 -1.029 1.748l-6 3.833a2 2 0 0 1 -1.942 0l-6 -3.833a2 2 0 0 1 -1.029 -1.747v-6.537a2 2 0 0 1 1.029 -1.748l6 -3.572a2.056 2.056 0 0 1 2 0l6 3.573h-.029z"
         />
         <motion.path

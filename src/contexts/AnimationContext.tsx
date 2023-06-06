@@ -20,7 +20,7 @@ interface State {
 const AnimationContext = createContext<State | null>(null);
 
 // The delay between each section starting it's animation sequence.
-const DELAY = 300;
+const DELAY = 150;
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => {

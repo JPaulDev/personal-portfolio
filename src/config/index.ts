@@ -35,12 +35,12 @@ export const SOCIAL_MEDIA = [
 ];
 
 export const RECENT_SKILLS = [
+  'C#',
+  '.NET',
   'TypeScript',
   'React',
   'Next.js',
   'Tailwind CSS',
-  'Prisma',
-  'Redux',
 ];
 
 export const TECHNOLOGIES = [

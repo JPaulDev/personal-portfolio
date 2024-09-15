@@ -10,7 +10,6 @@ import {
   Python,
   React,
   Redux,
-  StyledComponents,
   Tailwind,
   TypeScript,
 } from '@icons';
@@ -27,7 +26,6 @@ const icons = {
   postgresql: PostgreSQL,
   prisma: Prisma,
   jest: Jest,
-  'styled components': StyledComponents,
 };
 
 export default function Technologies() {

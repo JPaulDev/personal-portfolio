@@ -55,7 +55,6 @@ export const TECHNOLOGIES = [
   'PostgreSQL',
   'Prisma',
   'Jest',
-  'Styled Components',
 ];
 
 const RTL_LINK =

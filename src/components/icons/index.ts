@@ -14,7 +14,6 @@ export { default as Prisma } from './Prisma';
 export { default as Python } from './Python';
 export { default as React } from './React';
 export { default as Redux } from './Redux';
-export { default as StyledComponents } from './StyledComponents';
 export { default as Tailwind } from './Tailwind';
 export { default as Twitter } from './Twitter';
 export { default as TypeScript } from './TypeScript';

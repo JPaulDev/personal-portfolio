@@ -44,6 +44,8 @@ export const RECENT_SKILLS = [
 ];
 
 export const TECHNOLOGIES = [
+  'C#',
+  '.NET',
   'JavaScript',
   'TypeScript',
   'Python',

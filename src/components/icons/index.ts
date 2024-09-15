@@ -1,4 +1,6 @@
 export { default as Codepen } from './Codepen';
+export { default as CSharp } from './CSharp';
+export { default as DotNET } from './DotNET';
 export { default as External } from './External';
 export { default as Folder } from './Folder';
 export { default as Git } from './Git';

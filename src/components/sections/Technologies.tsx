@@ -1,6 +1,8 @@
 import { ScrollReveal, SectionHeading } from '@components';
 import { TECHNOLOGIES } from '@config';
 import {
+  CSharp,
+  DotNET,
   Git,
   JavaScript,
   Jest,
@@ -15,6 +17,8 @@ import {
 } from '@icons';
 
 const icons = {
+  'c#': CSharp,
+  '.net': DotNET,
   javascript: JavaScript,
   typescript: TypeScript,
   python: Python,
